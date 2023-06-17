@@ -1,11 +1,7 @@
-node {
-    agent {
-        docker {
-            image 'node:16-buster-slim'
-            args '-p 8000:8000'
+docker.image('node:16-buster-slim').inside {
+    node {
+        stage('Build') { 
+            sh 'npm install' 
         }
-    }
-    stage('Build') { 
-        sh 'npm install' 
     }
 }
