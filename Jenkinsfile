@@ -4,7 +4,7 @@ node {
             sh 'npm install' 
         }
         stage('Test') { 
-            sh 'npm test' 
+            sh 'npm run test' 
         }
     }
 }
